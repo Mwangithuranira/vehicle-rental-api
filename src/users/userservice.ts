@@ -63,24 +63,7 @@ export const UsersService = async (limit?: number) => {
                 address:true,
                 email:true
             },
-            with:{
-                bookings:{
-                    columns:{
-                        booking_date:true,
-                        return_date:true,
-                        total_amount:true,
-                        booking_status:true
-                    }
-                },
-                customerSupportTickets:{
-                    columns:{
-                        ticket_subject:true,
-                        ticket_description:true,
-                        ticket_status:true
-                    }
-                }
-            }
-            
+         
         }
         
     );
@@ -92,29 +75,15 @@ export const getUserService = async (id: number) => {
         where: eq(Users.id, id  ),
 
         columns:{
+            id:true,
             full_name:true,
             phone_number:true,
             address:true,
             email:true
         },
-        with:{
-            bookings:{
-                columns:{
-                    booking_date:true,
-                    return_date:true,
-                    total_amount:true,
-                    booking_status:true
-                }
-            },
-            customerSupportTickets:{
-                columns:{
-                    ticket_subject:true,
-                    ticket_description:true,
-                    ticket_status:true
-                }
-            }
+        
                 
-        }       
+           
          
 })};
 

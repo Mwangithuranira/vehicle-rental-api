@@ -6,6 +6,8 @@ import * as schema from "./schema";
 import Stripe  from 'stripe'; // Import the Stripe class
 
 
+
+
 const client = neon(process.env.Database_URL as string)
 
 const db = drizzle(client, { schema, logger: true })  //create a drizzle instance

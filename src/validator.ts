@@ -103,9 +103,7 @@ export const CustomerSupportTicketsValidator = z.object({
     user_id: z.string().nonempty({ message: "Required" }), // Assuming user_id is a string in your database
     full_name: z.string(),
     subject: z.string(),
-    ticket_id: z.number(),
     description: z.string(), // Corrected spelling from `describtion`
-    status: z.string(),
     created_at: z.date().optional(),
     updated_at: z.date().optional(),
 });

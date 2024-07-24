@@ -133,34 +133,32 @@ Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJhZ
 POST http://localhost:8000/api/vehicles
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNDc5OSwiZXhwIjoxNzIyODQ0Mzk5fQ.6aBEvzSjzx63WUE32O0zV9t5wey0f7ftuxebsYXSKYU
 Content-Type: application/json
-
-{
-    "rental_rate": "100",
-    "availability": true,
-    "manufacturer":"Toyota",
-    "model": "aiways-u6",
-    "image": "https://www.auto-data.net/images/f53/Aiways-U6.jpg",
-    "year": "2023",
-    "fuel_type": "Gasoline",
-    "engine_capacity": "2.5",
-    "transmission": "Automatic",
-    "seating_capacity": 6,
-    "color": "White",
-    "features": "Bluetooth, Backup Camera, Sunroof",
-    "price": 250,
-    "policy_number": "ABC12345",
-    "provider": "Geico",
-    "coverage": "Full Coverage",
-    "start_date": "2023-01-01",
-    "end_date": "2024-01-01",
-    "acquisition_date": "2020-01-01",
-    "depreciation_rate": 10,
-    "current_value": 20000,
-    "maintenance_cost": 500,
-    "status": "Available"
-  }
-
-
+    
+    {
+        "rental_rate": "140",
+        "availability": true,
+        "manufacturer": "Audi",
+        "model": "Q7",
+        "image": "https://th.bing.com/th/id/OIP.LPJUOJa51as3wctc7ObomQHaEL?pid=ImgDet&w=192&h=108&c=7",
+        "year": "2022",
+        "fuel_type": "Hybrid",
+        "engine_capacity": "2.0",
+        "transmission": "Automatic",
+        "seating_capacity": 7,
+        "color": "White",
+        "features": "Quattro All-Wheel Drive, Navigation, Adaptive Suspension",
+        "price": 52,
+        "policy_number": "VWX67890",
+        "provider": "Travelers",
+        "coverage": "Comprehensive",
+        "start_date": "2022-01-01",
+        "end_date": "2023-01-01",
+        "acquisition_date": "2020-01-01",
+        "depreciation_rate": 10,
+        "current_value": 32000,
+        "maintenance_cost": 600,
+        "status": "Available"
+    }
 
 
 ###
@@ -191,13 +189,14 @@ Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJhZ
 
 ###
 POST http://localhost:8000/api/bookings
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMDU4OTEzNCwiZXhwIjoxNzIxNzk4NzM0fQ.CHjOc-3PciV7Zbv7jVxvEyJvZnma4EMi9MzUETJ3Ue8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzIxODE1NTc1LCJleHAiOjE3MjMwMjUxNzV9.AqtzDs30xZrvSISuAlfpytGBewY3aagHepAw5tPUCi0
 Content-Type: application/json
 
 {
          
-   "user_id": "2",
-   "vehicle_id": "1",
+   "user_id": "1",
+   "vehicle_id": 5,
+    "location_id": "6",
    "booking_date": "2021-09-01",
    "return_date": "2021-09-03",
     "total_amount": 100,
@@ -251,7 +250,7 @@ Content-Type: application/json
 
 
 ###
-GET http://localhost:8000/api/vehicles
+GET http://localhost:8000/api/users
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzIxODE1NTc1LCJleHAiOjE3MjMwMjUxNzV9.AqtzDs30xZrvSISuAlfpytGBewY3aagHepAw5tPUCi0
 
 

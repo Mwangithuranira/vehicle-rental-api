@@ -15,6 +15,7 @@ export const listVehicles = async (c: Context) => {
     }
 }
 
+
 // Get vehicle by ID
 export const getVehicle = async (c: Context) => {
     const id = parseInt(c.req.param("id"));
