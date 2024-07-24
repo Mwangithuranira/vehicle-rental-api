@@ -1,0 +1,267 @@
+###
+POST  http://localhost:8000/auth/register
+Content-Type: application/json
+
+{
+    
+
+
+    "full_name": "Johnson mwangi",
+    "email": "john@gmail.com",
+    "password": "password",
+    "address": "123 Main St, Anytown, USA",
+    "phone_number": "555-1234",
+    "image_url": "https://randomuser.me/api/portraits/men/1.jpg",
+    "role": "admin"
+}
+
+
+###
+PUT http://localhost:8000/api/users/2
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNjQyNSwiZXhwIjoxNzIyODQ2MDI1fQ.R4pYVQsMVAMcpN5TfPfxePhglw3dm2pt-yW4MbxfU2s 
+Content-Type: application/json
+
+{
+    
+
+    "full_name": "Johnson mwangi",
+    "email": "johnson@gmail.com",
+    "password": "password",
+    "address": "123 Main St, Anytown, USA",
+    "phone_number": "555-1234",
+    "image_url": "https://randomuser.me/api/portraits/men/1.jpg",
+    "role": "user"
+}
+
+
+###
+POST http://localhost:8000/auth/login
+Content-Type: application/json
+
+{
+    "email": "johnson@gmail.com",
+    
+     "password": "password"
+}
+
+
+###
+POST http://localhost:8000/api/bookings
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNjQyNSwiZXhwIjoxNzIyODQ2MDI1fQ.R4pYVQsMVAMcpN5TfPfxePhglw3dm2pt-yW4MbxfU2s
+Content-Type: application/json
+
+ {
+  "user_id": "1",
+  "vehicle_id": 1,
+  "location_id": "1",
+
+  "booking_date": "2024/7/22",
+  
+  "return_date": "2024/7/22",
+  "total_amount": 300.00,
+  "amount": 300.00,
+ 
+  "payment_method": "credit_card",
+  "transaction_id": "ch_1J2eOp2eZvKYlo2C5Q7Q7Q7Q",
+  "payment_date": "2024/7/22",
+ 
+  "location_name": "PrimeCars Downtown",
+  "address": "123 Main Street, Anytown, AT 12345",
+  "contact_phone": "+1234567890"
+  }
+
+
+###
+POST http://localhost:8000/api/payments
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNjQyNSwiZXhwIjoxNzIyODQ2MDI1fQ.R4pYVQsMVAMcpN5TfPfxePhglw3dm2pt-yW4MbxfU2s
+Content-Type: application/json
+
+{
+
+
+  "booking_id": "19",
+  
+  "amount": 300.00
+
+ 
+  
+ 
+ 
+}
+###
+
+POST http://localhost:8000/api/payments
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNjQyNSwiZXhwIjoxNzIyODQ2MDI1fQ.R4pYVQsMVAMcpN5TfPfxePhglw3dm2pt-yW4MbxfU2s
+Content-Type: application/json
+
+{
+  "booking_id": "19",
+  
+  "amount": 300.00,
+  "payment_method": "card",
+  "status": "approved",
+  "stripe_payment_id": "ch_1J2eOp2eZvKYlo2C5Q7Q7Q7Q"
+}
+
+ 
+
+
+
+
+###
+POST  http://localhost:8000/api/users
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTQ3NjEzMiwiZXhwIjoxNzIyNjg1NzMyfQ.5WmKWWxjtKXOobldP_fplWlPKx9okFxjv_e5NQBC1bE
+Content-Type: application/json
+
+{
+    
+
+    "full_name": "Johnson mwangi",
+    "email": "johnson@gmail.com",
+    "password": "password",
+    "address": "123 Main St, Anytown, USA",
+    "phone_number": "555-1234",
+    "image_url": "https://randomuser.me/api/portraits/men/1.jpg",
+    "role": "admin"
+}
+###
+GET http://localhost:8000/api/bookings
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMDU1MTE2NiwiZXhwIjoxNzIxNzYwNzY2fQ.HJWGK2pfZ7GAVAxiYmDkqxSkljM2vH9cDhfFDb1infk
+
+
+###
+POST http://localhost:8000/api/vehicles
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNDc5OSwiZXhwIjoxNzIyODQ0Mzk5fQ.6aBEvzSjzx63WUE32O0zV9t5wey0f7ftuxebsYXSKYU
+Content-Type: application/json
+
+{
+    "rental_rate": "100",
+    "availability": true,
+    "manufacturer":"Toyota",
+    "model": "aiways-u6",
+    "image": "https://www.auto-data.net/images/f53/Aiways-U6.jpg",
+    "year": "2023",
+    "fuel_type": "Gasoline",
+    "engine_capacity": "2.5",
+    "transmission": "Automatic",
+    "seating_capacity": 6,
+    "color": "White",
+    "features": "Bluetooth, Backup Camera, Sunroof",
+    "price": 25000,
+    "policy_number": "ABC12345",
+    "provider": "Geico",
+    "coverage": "Full Coverage",
+    "start_date": "2023-01-01",
+    "end_date": "2024-01-01",
+    "acquisition_date": "2020-01-01",
+    "depreciation_rate": 10,
+    "current_value": 20000,
+    "maintenance_cost": 500,
+    "status": "Available"
+  }
+
+
+
+
+###
+PUT http://localhost:8000/api/users/2
+Content-Type: application/json
+
+{
+    "full_name": "Jane Doe",
+    "email": "john@gmail.com",
+    "address": "123 Main St",
+    "phone_number": "123-456-7890",
+    "role": "user"
+}
+
+
+###
+DELETE http://localhost:8000/api/users/13
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTYzNDc5OSwiZXhwIjoxNzIyODQ0Mzk5fQ.6aBEvzSjzx63WUE32O0zV9t5wey0f7ftuxebsYXSKYU
+
+
+
+```
+
+###
+GET http://localhost:8000/api
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMDU4OTEzNCwiZXhwIjoxNzIxNzk4NzM0fQ.CHjOc-3PciV7Zbv7jVxvEyJvZnma4EMi9MzUETJ3Ue8
+
+
+###
+POST http://localhost:8000/api/bookings
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMDU4OTEzNCwiZXhwIjoxNzIxNzk4NzM0fQ.CHjOc-3PciV7Zbv7jVxvEyJvZnma4EMi9MzUETJ3Ue8
+Content-Type: application/json
+
+{
+         
+   "user_id": "2",
+   "vehicle_id": "1",
+   "booking_date": "2021-09-01",
+   "return_date": "2021-09-03",
+    "total_amount": 100,
+    "amount": 100,
+    "status": "approved",
+    "location_name": "PrimeCars Downtown",
+    "address": "nyeri",
+    "contact_phone": "+1234567890",
+    "payment_method": "credit_card",
+    
+    "stripe_payment_id": "ch_1J2eOp2eZvKYlo2C5Q7Q7Q7Q"    
+
+      
+}
+
+
+
+
+
+
+###
+PUT http://localhost:8000/api/bookings/2
+Content-Type: application/json
+
+{
+    "user_id": 2,
+    "room_id": 1,
+    "check_in": "2021-09-01",
+    "check_out": "2021-09-03"
+}
+
+
+###
+DELETE http://localhost:8000/api/bookings/8
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMDU4OTEzNCwiZXhwIjoxNzIxNzk4NzM0fQ.CHjOc-3PciV7Zbv7jVxvEyJvZnma4EMi9MzUETJ3Ue8
+
+
+```
+
+###
+POST http://localhost:8000/api/tickets
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMDU4OTEzNCwiZXhwIjoxNzIxNzk4NzM0fQ.CHjOc-3PciV7Zbv7jVxvEyJvZnma4EMi9MzUETJ3Ue8
+Content-Type: application/json
+
+{
+    "user_id": 2,
+    "subject": "I need help",
+    "description": "I am having trouble with my booking",
+    "status": "open"
+}
+
+
+###
+GET http://localhost:8000/api/bookings
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzIxODE1NTc1LCJleHAiOjE3MjMwMjUxNzV9.AqtzDs30xZrvSISuAlfpytGBewY3aagHepAw5tPUCi0
+
+
+###
+POST http://localhost:8000/api/payments
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzIxODE1NTc1LCJleHAiOjE3MjMwMjUxNzV9.AqtzDs30xZrvSISuAlfpytGBewY3aagHepAw5tPUCi0
+Content-Type: application/json
+
+{
+    "bookingId": 50,
+    "amount": 100
+   
+}
