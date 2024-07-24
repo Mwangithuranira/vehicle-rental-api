@@ -35,7 +35,7 @@ export const getAllVehiclesService = async () => {
                     columns:{
                         provider:true,
                         policy_number:true,
-                       
+                        coverage:true,
                         start_date:true,
                         end_date:true
                     }
@@ -47,7 +47,7 @@ export const getAllVehiclesService = async () => {
                         maintenance_date:true
                     }
                },
-             
+               fleetManagements:true,
             }
         }
     );

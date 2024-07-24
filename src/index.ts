@@ -84,14 +84,11 @@ async function startServer() {
 
         // CORS Middleware
 
-        app.use('*', cors({
-            origin: process.env.FRONTEND_ORIGIN || '*', // Set your frontend origin here  
-            allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-            allowHeaders: ['Content-Type', 'Authorization'], // Allow 'Authorization' header
-        }));
+        app.use('/*', cors());
 
         app.use('*', errorHandler);
 
+        
         // Apply authentication middleware to routes
        
         app.use('/api/*', authenticate);

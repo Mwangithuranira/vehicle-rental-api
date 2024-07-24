@@ -4,6 +4,7 @@ import { Hono } from 'hono';
 import * as AuthController from './authcontroller'; // Adjust the path based on your project structure
 
  const AuthRouter = new Hono();
+ 
 
 AuthRouter.post('/register', AuthController.registerUser);
 AuthRouter.post('/login', AuthController.loginUser);

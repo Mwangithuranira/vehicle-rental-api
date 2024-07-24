@@ -7,12 +7,12 @@ Content-Type: application/json
 
 
     "full_name": "Johnson mwangi",
-    "email": "john@gmail.com",
+    "email": "adams@gmail.com",
     "password": "password",
-    "address": "123 Main St, Anytown, USA",
+    "address": "nyeri",
     "phone_number": "555-1234",
     "image_url": "https://randomuser.me/api/portraits/men/1.jpg",
-    "role": "admin"
+    "role": "user"
 }
 
 
@@ -125,7 +125,7 @@ Content-Type: application/json
     "role": "admin"
 }
 ###
-GET http://localhost:8000/api/bookings
+GET http://localhost:8000/api/fleets
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMDU1MTE2NiwiZXhwIjoxNzIxNzYwNzY2fQ.HJWGK2pfZ7GAVAxiYmDkqxSkljM2vH9cDhfFDb1infk
 
 
@@ -147,7 +147,7 @@ Content-Type: application/json
     "seating_capacity": 6,
     "color": "White",
     "features": "Bluetooth, Backup Camera, Sunroof",
-    "price": 25000,
+    "price": 250,
     "policy_number": "ABC12345",
     "provider": "Geico",
     "coverage": "Full Coverage",
@@ -251,7 +251,7 @@ Content-Type: application/json
 
 
 ###
-GET http://localhost:8000/api/bookings
+GET http://localhost:8000/api/vehicles
 Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzIxODE1NTc1LCJleHAiOjE3MjMwMjUxNzV9.AqtzDs30xZrvSISuAlfpytGBewY3aagHepAw5tPUCi0
 
 

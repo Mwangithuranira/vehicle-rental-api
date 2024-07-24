@@ -123,6 +123,7 @@ export const fleetmanagement = pgTable('fleetmanagement', {
     updated_at: timestamp('updated_at').notNull().defaultNow(),
 });
 
+
 export const VehicleMaintenance = pgTable('vehicle_maintenance', {
     id: serial('id').primaryKey(),
     vehicle_id: integer('vehicle_id').notNull().references(() => Vehicles.id,{ onDelete: 'cascade', onUpdate: 'cascade' }),
@@ -173,7 +174,10 @@ export const vehicleRelations = relations(Vehicles, ({ one, many }) => ({
         references: [VehicleInsurance.id]
     }),
     bookings: many(Bookings),
-    fleetManagements: many(fleetmanagement),
+    fleetManagements: one(fleetmanagement,{
+        fields:[Vehicles.id],
+        references:[fleetmanagement.vehicle_id]
+    }),
     vehicleMaintenances: many(VehicleMaintenance),
     vehicleInsurances: many(VehicleInsurance),
   
