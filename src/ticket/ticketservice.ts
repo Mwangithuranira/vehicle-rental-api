@@ -5,8 +5,26 @@ import db from '../drizzle/db';
 import { eq } from 'drizzle-orm';
 
 // Get all tickets
-export const TicketsService = async (): Promise<TICustomerSupportTicket[]> => {
-    return await db.query.CustomerSupportTickets.findMany();
+export const TicketsService = async () => {
+    return await db.query.CustomerSupportTickets.findMany(
+        {
+            columns:{
+                ticket_subject:true,
+                ticket_description:true,
+                
+            },
+            with:{
+                user:{
+                    columns:{
+                        full_name:true,
+                        phone_number:true,
+                        address:true,
+                        email:true
+                    }
+                }
+            }
+        }
+    );
 }
 
 // Get ticket by ID

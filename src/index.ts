@@ -22,9 +22,6 @@ import jwt from 'jsonwebtoken';
 
 
 
-
-
-
 const app = new Hono();
 const client = new Client({
     connectionString: process.env.Database_URL,  

@@ -39,7 +39,7 @@ POST http://localhost:8000/auth/login
 Content-Type: application/json
 
 {
-    "email": "johnson@gmail.com",
+    "email": "john@gmail.com",
     
      "password": "password"
 }
@@ -250,8 +250,8 @@ Content-Type: application/json
 
 
 ###
-GET http://localhost:8000/api/users
-Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzIxODE1NTc1LCJleHAiOjE3MjMwMjUxNzV9.AqtzDs30xZrvSISuAlfpytGBewY3aagHepAw5tPUCi0
+GET http://localhost:8000/api/tickets
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInJvbGUiOiJhZG1pbiIsImlhdCI6MTcyMTg2Nzc2MCwiZXhwIjoxNzIzMDc3MzYwfQ.sHWXPmLh5zI74RhK9jC5-_AKHOyWlIvjrYXzEmp4ppU
 
 
 ###
