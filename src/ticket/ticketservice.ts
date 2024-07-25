@@ -9,6 +9,7 @@ export const TicketsService = async () => {
     return await db.query.CustomerSupportTickets.findMany(
         {
             columns:{
+                id:true,
                 ticket_subject:true,
                 ticket_description:true,
                 
