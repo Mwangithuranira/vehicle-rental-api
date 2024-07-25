@@ -17,7 +17,7 @@ export const getTicketByIdService = async (id: number) => {
         columns:{
             ticket_subject:true,
             ticket_description:true,
-            ticket_status:true
+            
         },
         with:{
             user:{
